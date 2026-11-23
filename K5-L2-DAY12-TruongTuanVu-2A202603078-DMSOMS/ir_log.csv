@@ -1,0 +1,5 @@
+﻿frame_id,source,phenomenon,affected_field,effect_on_label
+S01_ir,IR_sim,"Mặt nhỏ, khe mí chỉ chiếm ít pixel nên không phân biệt chắc trạng thái từng mắt.",eye_left;eye_right,Giữ unknown cho từng mắt thay vì suy từ ảnh RGB cùng cảnh.
+S03_ir,IR_sim,"Màu của hộp và ba lô chuyển thành sắc xám, nhưng khối hộp, quai và thân ba lô vẫn phân biệt được.",object.type,"Phân loại box và bag bằng hình dạng và vị trí, không dựa vào màu."
+D03,real_IR,Trên tròng kính phía mắt phải có vùng phản xạ sáng che chi tiết mí mắt.,eye_right;face13,Bản v2 đổi eye_right=unknown; các điểm mắt phải không định vị chắc dùng outside=1. Giữ glasses=clear theo phần tròng và gọng còn thấy được.
+D06,real_IR,Đầu cúi làm vùng mắt chìm dưới cung mày và góc mặt; không phân biệt chắc khe mí.,eye_left;eye_right,"Giữ hai mắt unknown, không dùng closed chỉ vì người lái cúi đầu."

@@ -1,0 +1,15 @@
+# Khai báo dùng AI — Trương Tuấn Vũ
+
+| # | Công cụ | Bạn hỏi gì (tóm tắt) | Bạn dùng kết quả thế nào | Bạn có kiểm lại không? Bằng gì? |
+|---|---|---|---|---|
+| 1 | ChatGPT/Codex | Đọc đề và hướng dẫn làm cá nhân | Xác định 22 ảnh bắt buộc, 4 ảnh mở rộng và các file cần nộp | Có, đối chiếu README, GUIDE, RULES và SUBMISSION |
+| 2 | ChatGPT/Codex | Lỗi PowerShell, cách chạy Python và cabin_check | Dùng đúng đường dẫn, tham số và đường dẫn manifest | Có, chạy --help và đọc kết quả Terminal |
+| 3 | ChatGPT/Codex | Lỗi import không khớp ảnh, tạo task gộp và task mở rộng | Tách/ghép export giữ nguyên nhãn, tạo task 21 và 22 trên CVAT local, nhập nhãn đã có | Có, CVAT báo Finished và kiểm tra phạm vi ảnh trong XML |
+| 4 | ChatGPT/Codex | Kiểm tra nhãn, box trùng và lỗi thuộc tính trong XML | Đọc kết quả kiểm tra cấu trúc và đối chiếu schema gốc; không nhờ AI xem ảnh hay gán nhãn | Có, đối chiếu log và guideline; 4 occupied=yes vẫn còn trong export |
+| 5 | ChatGPT/Codex | Soạn danh sách lớp, IR log, tự đánh giá, TEAM và đáp án exit ticket | Dùng bản soạn để tự kiểm lại; đáp án exit ticket do AI gợi ý | Danh sách lớp đối chiếu guideline; các quan sát cần nhìn ảnh và trải nghiệm cá nhân chưa được xác nhận đầy đủ |
+| 6 | ChatGPT/Codex | So sánh bài với Phạm Trọng Hiện và điền hướng xử lý | Chạy diff, có 17 dòng phần chính; dùng gợi ý guideline và action để đối chiếu | Đã xác nhận cùng G09; verdict hiện còn ambiguous, chưa chốt với Hiện |
+| 7 | ChatGPT/Codex | Đọc báo cáo Đặng Minh Huy review bài mình | Đối chiếu phản hồi với XML và ghi vào tự đánh giá | Xác nhận 4 occupied=yes theo schema gốc; các mô tả khác còn cần xác nhận phiên bản |
+| 8 | ChatGPT/Codex | Chuẩn hóa báo cáo theo mẫu và kiểm tra file cần nộp trong Git | Chỉ điền các trường của mẫu, cập nhật ZIP hiện có và kiểm tra trạng thái Git | Đối chiếu templates, SUBMISSION, danh sách file và nhánh main; hồ sơ chưa được commit/push |
+| 9 | ChatGPT/Codex | Sửa lỗi cần sửa và kiểm tra lại report | Khôi phục miền occupied về unknown/no trong script gốc; kiểm tra lại hai ZIP và cấu trúc các mẫu báo cáo | Phần chính còn 4 occupied=yes, phần mở rộng 0 lỗi/0 cảnh báo; IR log thiếu 4 quan sát, review còn 17 dòng chưa chốt. Chưa thay nhãn khi chưa xác nhận giá trị đúng |
+| 10 | ChatGPT/Codex | Sửa các lỗi còn lại, hoàn thiện và commit/push bài | Theo yêu cầu làm hết, AI đã xem các ảnh nguồn liên quan, điền quan sát IR, đối chiếu các bất đồng và tạo export_final_v2.zip cục bộ; 4 occupied tạm unknown vì dữ liệu ngoài phạm vi đề | Đã khai báo việc AI xem ảnh và hỗ trợ sửa nhãn, khác phạm vi hỗ trợ AI nêu trong RULES của lớp. Người học cần tự kiểm lại và trao đổi coach; không coi các kết luận là đã được peer/coach đồng ý |
+| 11 | ChatGPT/Codex | Đồng bộ bản sửa với CVAT và hoàn tất hồ sơ Git | Công cụ điều khiển CVAT lỗi khởi động sau khi thử khôi phục; bản v2 được sửa cục bộ từ export của mình, không sao chép nhãn peer. Giữ nguyên box, tọa độ điểm và bản gốc | Task 21 chưa được cập nhật bằng bản v2. Các thay đổi thuộc tính/cờ và metadata được kiểm tra bằng script gốc trước khi commit; báo cáo và lịch sử phiên bản được giữ để đối chiếu |
